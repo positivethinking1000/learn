@@ -20,4 +20,4 @@ bin/
 golang.org/
 google.golang.org/
 pkg/
-github.com/golang/
+golang/
