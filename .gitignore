@@ -15,3 +15,7 @@
 
 #binary files
 bin/
+
+#Google and GoLang example files
+golang.org/
+google.golang.org/
