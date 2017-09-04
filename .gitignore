@@ -19,3 +19,5 @@ bin/
 #Google and GoLang example files
 golang.org/
 google.golang.org/
+pkg/
+github.com/golang/
