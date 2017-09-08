@@ -1,0 +1,17 @@
+syntax="proto3";
+
+package learnhelloworld;
+//intro service descriptor
+service Intro {
+    //Introduce each other
+    rpc Intro (IntroRequest) returns (IntroResponse) {}
+}
+
+message IntroRequest {
+    string introPerson =1;
+    int32 numberOfFingers =2;
+}
+
+message IntroResponse {
+    string introMachine =1;
+}
