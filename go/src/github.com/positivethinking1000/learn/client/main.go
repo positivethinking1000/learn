@@ -47,7 +47,7 @@ func main() {
 	if len(os.Args) > 1 {
 		name = os.Args[1]
 	}
-	r, err := c.Intro(context.Background(), &pb.IntroRequest{IntroPerson: name, NumberOfFingers:22})
+	r, err := c.Intro(context.Background(), &pb.IntroRequest{IntroPerson: name})
 	if err != nil {
 		log.Fatalf("could not greet: %v", err)
 	}
