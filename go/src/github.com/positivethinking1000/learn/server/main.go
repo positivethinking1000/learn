@@ -54,6 +54,7 @@ func (s *server) Intro(ctx context.Context, in *pb.IntroRequest) (*pb.IntroRespo
 
 
 func main() {
+        log.Printf("Server started....")
 	lis, err := net.Listen("tcp", port)
 	if err != nil {
 		log.Fatalf("failed to listen: %v", err)
