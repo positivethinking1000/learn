@@ -18,8 +18,7 @@ RUN go get -u  google.golang.org/grpc
 RUN go install github.com/positivethinking1000/learn/server
 #RUN go install 
 
-# Run the outyet command by default when the container starts.
-ENTRYPOINT /go/bin/server
-
 # Document that the service listens on port 8080.
 EXPOSE 50052
+# Run the outyet command by default when the container starts.
+ENTRYPOINT /go/bin/server
