@@ -29,24 +29,26 @@ import (
 )
 
 const (
-	address     = "localhost:50052"
+	defaultAddress     = "localhost:50052"
 	defaultName = "Jon Snow"
 )
 
 func main() {
 	// Set up a connection to the server.
-	conn, err := grpc.Dial(address, grpc.WithInsecure())
+	address := defaultAddress
+        name := defaultName
+	if len(os.Args) > 2 {
+                address = os.Args[1]
+		name = os.Args[2]
+	}
+
+        conn, err := grpc.Dial(address, grpc.WithInsecure())
 	if err != nil {
 		log.Fatalf("did not connect: %v", err)
 	}
 	defer conn.Close()
 	c := pb.NewIntroClient(conn)
 
-	// Contact the server and print out its response.
-	name := defaultName
-	if len(os.Args) > 1 {
-		name = os.Args[1]
-	}
 	r, err := c.Intro(context.Background(), &pb.IntroRequest{IntroPerson: name})
 	if err != nil {
 		log.Fatalf("could not greet: %v", err)
