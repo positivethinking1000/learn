@@ -48,7 +48,7 @@ type server struct{}
 //	Intro(context.Context, *IntroRequest) (*IntroResponse, error)
 func (s *server) Intro(ctx context.Context, in *pb.IntroRequest) (*pb.IntroResponse, error) {
         log.Printf("You don't know nothing %s with %d fingers!", in.IntroPerson, in.NumberOfFingers)
-	return &pb.IntroResponse{IntroMachine: "I'm Skynet!"}, nil
+	return &pb.IntroResponse{IntroMachine: "I'm the newer Skynet!"}, nil
 }
 
 
