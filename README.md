@@ -15,6 +15,7 @@ Create a hello world echo gRPC Go Lang application running on a docker container
 
 ### ECS Cluster
 - Support mutliple Docker containers
+   - Use host port numbers returned and gave those to ELB
 - Support health check and replace non-healthy containers
 - 
 
